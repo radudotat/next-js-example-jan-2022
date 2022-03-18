@@ -1,5 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+.idea
 .env
 
 # dependencies
@@ -36,6 +36,7 @@ yarn-error.log*
 .vercel
 
 .eslintcache
+*.tsbuildinfo
 *.tsbuildinfo
 *.tsbuildinfo
 *.tsbuildinfo

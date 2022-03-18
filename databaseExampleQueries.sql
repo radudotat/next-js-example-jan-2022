@@ -27,3 +27,22 @@ VALUES
 
 -- Read some animals (R in CRUD - Read)
 SELECT * FROM animals;
+
+
+-- Create user
+psql -U postgres -h localhost
+
+CREATE ROLE next_js_example_jan_2022 WITH
+    PASSWORD 'next_js_example_jan_2022'
+    LOGIN
+    NOSUPERUSER
+    CREATEDB
+    NOCREATEROLE
+    INHERIT
+    NOREPLICATION
+    CONNECTION LIMIT -1;
+
+ALTER USER next_js_example_jan_2022 WITH PASSWORD 'next_js_example_jan_2022';
+
+create database next_js_example_jan_2022
+    with owner next_js_example_jan_2022
